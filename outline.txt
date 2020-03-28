@@ -1,0 +1,30 @@
+
+DATA COLLECTION PROGRAM OUTLINE
+-------------------------------
+
+Main purpose is to check the internet speed every minute and then process it and store it into a dataframe.
+
+Create a new dataframe for current day.
+    - use pandas to create a dataframe that will have the following columns in it.
+        - ping, server, download speed, upload speed, time of test, ?location?, ?can we do which wifi port?
+    - set this dataframe as the current one.
+
+Check the internet speed every minute.
+    - HOW TO CHECK AND HAVE DONE EVERY MIN?!
+    - Using speedtest to check the download speed, upload speed (not as important), server and ping.
+    - process this data (convert bits/s to megabytes/s).
+    - add the data to the current dataframe.
+
+Open the CSV file containing the previous days data as a dataframe.
+    - open this data frame as past dataframe.
+
+Save the dataframe in a CSV file.
+    - append the current dataframe information to the old data.
+    - save the newly udpated dataframe containing all of the information.
+
+??possilby save the CSV files by month??
+
+??? might need a way for program to check which months csv file should be open???
+    - need a naming system.
+    - will need a function to parse the current date and open the appropriate CSV files.
+
