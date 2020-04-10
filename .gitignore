@@ -1,3 +1,6 @@
+# This projects dev files
+outline.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
