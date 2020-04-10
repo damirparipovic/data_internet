@@ -4,27 +4,52 @@ DATA COLLECTION PROGRAM OUTLINE
 
 Main purpose is to check the internet speed every minute and then process it and store it into a dataframe.
 
-Create a new dataframe for current day.
-    - use pandas to create a dataframe that will have the following columns in it.
-        - ping, server, download speed, upload speed, time of test, ?location?, ?can we do which wifi port?
+(DONE: Use task scheduler) Check the internet speed every 15 minute.
+    - HOW TO CHECK AND HAVE DONE EVERY MIN?!
+        -> A: can use task scheduler to start the script and implement in the script when to check speed
+                - check speed when the min % 15 == 0 ??
+
+Create/open a new dataframe for current today.
+
+    - check if .csv for current year_month exists
+        - if it does:
+            - open the dataframe
+        - else:
+            - create a new dataframe with the appropriate columns for the month
+
+    - pandas dataframe will have the following columns:
+        - ping, server, download speed, upload speed, time/date (possibly keep seperate) of test, ?location?, ?can we do which wifi port?
+
     - set this dataframe as the current one.
 
-Check the internet speed every minute.
-    - HOW TO CHECK AND HAVE DONE EVERY MIN?!
+
+
     - Using speedtest to check the download speed, upload speed (not as important), server and ping.
     - process this data (convert bits/s to megabytes/s).
     - add the data to the current dataframe.
 
+    - ??? possibly implement geolocation ???
+
 Open the CSV file containing the previous days data as a dataframe.
     - open this data frame as past dataframe.
 
-Save the dataframe in a CSV file.
+Save (export) the dataframe in a CSV file.
     - append the current dataframe information to the old data.
     - save the newly udpated dataframe containing all of the information.
 
 ??possilby save the CSV files by month??
+    - in seperate files.
 
 ??? might need a way for program to check which months csv file should be open???
     - need a naming system.
     - will need a function to parse the current date and open the appropriate CSV files.
 
+
+Reference work
+---------------
+
+https://pimylifeup.com/raspberry-pi-internet-speed-monitor/
+
+https://makezine.com/projects/send-ticket-isp-when-your-internet-drops/
+
+https://towardsdatascience.com/automate-your-python-scripts-with-task-scheduler-661d0a40b279
